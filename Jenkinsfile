@@ -1,9 +1,9 @@
-// static_code_analysis()
-// build()
+static_code_analysis()
+build()
 
-on_commit {
-    static_code_analysis()
-}
+// on_commit {
+//     static_code_analysis()
+// }
 
 // on_pull_request to: develop, {
 //   continuous_integration()
