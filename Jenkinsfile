@@ -1,9 +1,12 @@
 on_commit {
-    continuous_integration()
+    static_code_analysis()
 }
 
 on_pull_request to: develop, {
   continuous_integration()
+}
+
+on_merge_to: develop {
   docker_deploy_to dev
 }
 

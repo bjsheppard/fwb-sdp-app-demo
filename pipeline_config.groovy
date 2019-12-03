@@ -26,9 +26,11 @@ stages{
 application_environments{
     dev{
         docker_network = "dev"
+        docker_prt = "8081"
     }
     prod{
         long_name = "Production"
         docker_network = "prod"
+        docker_port = "8082"
     }
 }
