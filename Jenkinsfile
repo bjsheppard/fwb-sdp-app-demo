@@ -5,7 +5,7 @@ on_commit {
   static_code_analysis()
 }
 
-on_pull_request to: develop {
+on_pull_request to: develop, {
   static_code_analysis()
   build()
 }
