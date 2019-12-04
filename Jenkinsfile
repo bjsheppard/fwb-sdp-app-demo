@@ -10,9 +10,9 @@ on_pull_request to: develop, {
   build()
 }
 
-// on_merge_to: develop {
-//   docker_deploy_to dev
-// }
+on_merge to: develop {
+  docker_local_deploy dev
+}
 
 // on_merge to: master, from: develop, {
 //   docker_deploy_to prod
