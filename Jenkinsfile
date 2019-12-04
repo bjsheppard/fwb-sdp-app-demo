@@ -1,6 +1,3 @@
-// static_code_analysis()
-// build()
-
 on_commit {
   static_code_analysis()
 }
