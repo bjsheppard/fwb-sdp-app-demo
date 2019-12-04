@@ -6,7 +6,9 @@ libraries{
       docker_args = "--network=try-it-out_sdp"  // docker runtime args
     }
   }
-  github_enterprise
+  github{
+    source_type = "github"
+  }
   sonarqube{
     enforce_quality_gate = true
   }
