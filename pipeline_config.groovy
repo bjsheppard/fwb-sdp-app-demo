@@ -6,7 +6,9 @@ libraries{
       docker_args = "--network=try-it-out_sdp"  // docker runtime args
     }
   }
-  github_enterprise
+  github{
+    source_type = "github"
+  }
   sonarqube{
     enforce_quality_gate = true
   }
@@ -16,21 +18,21 @@ libraries{
   }
 }
 
-// stages{
-//     continuous_integration{
-//         static_code_analysis
-//         build
-//     }
-// }
+stages{
+    continuous_integration{
+        static_code_analysis
+        build
+    }
+}
 
-// application_environments{
-//     dev{
-//         docker_network = "dev"
-//         docker_prt = "8081"
-//     }
-//     prod{
-//         long_name = "Production"
-//         docker_network = "prod"
-//         docker_port = "8082"
-//     }
-// }
+application_environments{
+    dev{
+        docker_network = "dev"
+        docker_prt = "8081"
+    }
+    prod{
+        long_name = "Production"
+        docker_network = "prod"
+        docker_port = "8082"
+    }
+}
