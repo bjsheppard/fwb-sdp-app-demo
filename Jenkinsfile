@@ -2,11 +2,12 @@
 // build()
 
 on_commit {
-    static_code_analysis()
+  static_code_analysis()
 }
 
 on_pull_request to: develop, {
-  continuous_integration()
+  static_code_analysis()
+  build()
 }
 
 // on_merge_to: develop {
