@@ -17,6 +17,7 @@ libraries{
     cred = "sdp-docker-registry"
     remove_local_image = true
   }
+  docker_local
 }
 
 stages{
