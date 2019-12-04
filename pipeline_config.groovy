@@ -29,6 +29,7 @@ stages{
 
 application_environments{
     dev{
+        long_name = "Development"
         docker_network = "dev"
         docker_prt = "8081"
     }
