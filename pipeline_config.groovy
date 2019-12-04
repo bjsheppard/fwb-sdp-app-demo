@@ -3,7 +3,7 @@ libraries{
     images{
       registry = "http://0.0.0.0:5000" // registry url
       cred = "sdp-docker-registry"// jenkins cred id to authenticate
-      // docker_args = "--network=try-it-out_sdp"  // docker runtime args
+      docker_args = "--network=try-it-out_sdp"  // docker runtime args
     }
   }
   github_enterprise
@@ -16,21 +16,21 @@ libraries{
   }
 }
 
-stages{
-    continuous_integration{
-        static_code_analysis
-        build
-    }
-}
+// stages{
+//     continuous_integration{
+//         static_code_analysis
+//         build
+//     }
+// }
 
-application_environments{
-    dev{
-        docker_network = "dev"
-        docker_prt = "8081"
-    }
-    prod{
-        long_name = "Production"
-        docker_network = "prod"
-        docker_port = "8082"
-    }
-}
+// application_environments{
+//     dev{
+//         docker_network = "dev"
+//         docker_prt = "8081"
+//     }
+//     prod{
+//         long_name = "Production"
+//         docker_network = "prod"
+//         docker_port = "8082"
+//     }
+// }
