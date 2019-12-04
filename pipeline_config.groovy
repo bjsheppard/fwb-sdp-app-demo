@@ -15,6 +15,7 @@ libraries{
   docker{
     registry = "0.0.0.0:5000"
     cred = "sdp-docker-registry"
+    remove_local_image = true
   }
 }
 
