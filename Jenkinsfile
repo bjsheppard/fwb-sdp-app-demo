@@ -1,1 +1,3 @@
-gradle_build()
+on_commit {
+    gradle_build()
+}
