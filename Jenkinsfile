@@ -10,9 +10,5 @@ on_pull_request to: develop, {
 on_merge to: develop, {
   static_code_analysis()
   build()
-  docker_local_deploy dev
+  //deploy_to dev
 }
-
-// on_merge to: master, from: develop, {
-//   docker_deploy_to prod
-// }
